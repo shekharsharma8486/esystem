@@ -1,0 +1,940 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="EbookingWebProject.Master1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%--  <link rel="stylesheet" media="all" href="css/style.css" />
+    <link rel="stylesheet" media="all" href="css/responsive.css" />--%>
+
+    <style type="text/css">
+        .tester > span
+        {
+            position: relative;
+            top: 25%;
+        }
+
+        #Div2
+        {
+            max-width: 900px;
+            margin: 0 auto;
+            /* display:block;*/
+        }
+
+
+        img.bell
+        {
+            opacity: 1.0;
+            -webkit-animation: ring 8s 1s ease-in-out infinite;
+            -webkit-transform-origin: 50% 4px;
+            -moz-animation: ring 8s 1s ease-in-out infinite;
+            -moz-transform-origin: 50% 4px;
+            animation: ring 8s 1s ease-in-out infinite;
+            transform-origin: 50% 4px;
+        }
+
+        @-webkit-keyframes ring
+        {
+            0%
+            {
+                -webkit-transform: rotateZ(0);
+            }
+
+            1%
+            {
+                -webkit-transform: rotateZ(30deg);
+            }
+
+            3%
+            {
+                -webkit-transform: rotateZ(-28deg);
+            }
+
+            5%
+            {
+                -webkit-transform: rotateZ(34deg);
+            }
+
+            7%
+            {
+                -webkit-transform: rotateZ(-32deg);
+            }
+
+            9%
+            {
+                -webkit-transform: rotateZ(30deg);
+            }
+
+            11%
+            {
+                -webkit-transform: rotateZ(-28deg);
+            }
+
+            13%
+            {
+                -webkit-transform: rotateZ(26deg);
+            }
+
+            15%
+            {
+                -webkit-transform: rotateZ(-24deg);
+            }
+
+            17%
+            {
+                -webkit-transform: rotateZ(22deg);
+            }
+
+            19%
+            {
+                -webkit-transform: rotateZ(-20deg);
+            }
+
+            21%
+            {
+                -webkit-transform: rotateZ(18deg);
+            }
+
+            23%
+            {
+                -webkit-transform: rotateZ(-16deg);
+            }
+
+            25%
+            {
+                -webkit-transform: rotateZ(14deg);
+            }
+
+            27%
+            {
+                -webkit-transform: rotateZ(-12deg);
+            }
+
+            29%
+            {
+                -webkit-transform: rotateZ(10deg);
+            }
+
+            31%
+            {
+                -webkit-transform: rotateZ(-8deg);
+            }
+
+            33%
+            {
+                -webkit-transform: rotateZ(6deg);
+            }
+
+            35%
+            {
+                -webkit-transform: rotateZ(-4deg);
+            }
+
+            37%
+            {
+                -webkit-transform: rotateZ(2deg);
+            }
+
+            39%
+            {
+                -webkit-transform: rotateZ(-1deg);
+            }
+
+            41%
+            {
+                -webkit-transform: rotateZ(1deg);
+            }
+
+            43%
+            {
+                -webkit-transform: rotateZ(0);
+            }
+
+            100%
+            {
+                -webkit-transform: rotateZ(0);
+            }
+        }
+
+        @-moz-keyframes ring
+        {
+            0%
+            {
+                -moz-transform: rotate(0);
+            }
+
+            1%
+            {
+                -moz-transform: rotate(30deg);
+            }
+
+            3%
+            {
+                -moz-transform: rotate(-28deg);
+            }
+
+            5%
+            {
+                -moz-transform: rotate(34deg);
+            }
+
+            7%
+            {
+                -moz-transform: rotate(-32deg);
+            }
+
+            9%
+            {
+                -moz-transform: rotate(30deg);
+            }
+
+            11%
+            {
+                -moz-transform: rotate(-28deg);
+            }
+
+            13%
+            {
+                -moz-transform: rotate(26deg);
+            }
+
+            15%
+            {
+                -moz-transform: rotate(-24deg);
+            }
+
+            17%
+            {
+                -moz-transform: rotate(22deg);
+            }
+
+            19%
+            {
+                -moz-transform: rotate(-20deg);
+            }
+
+            21%
+            {
+                -moz-transform: rotate(18deg);
+            }
+
+            23%
+            {
+                -moz-transform: rotate(-16deg);
+            }
+
+            25%
+            {
+                -moz-transform: rotate(14deg);
+            }
+
+            27%
+            {
+                -moz-transform: rotate(-12deg);
+            }
+
+            29%
+            {
+                -moz-transform: rotate(10deg);
+            }
+
+            31%
+            {
+                -moz-transform: rotate(-8deg);
+            }
+
+            33%
+            {
+                -moz-transform: rotate(6deg);
+            }
+
+            35%
+            {
+                -moz-transform: rotate(-4deg);
+            }
+
+            37%
+            {
+                -moz-transform: rotate(2deg);
+            }
+
+            39%
+            {
+                -moz-transform: rotate(-1deg);
+            }
+
+            41%
+            {
+                -moz-transform: rotate(1deg);
+            }
+
+            43%
+            {
+                -moz-transform: rotate(0);
+            }
+
+            100%
+            {
+                -moz-transform: rotate(0);
+            }
+        }
+
+        @keyframes ring
+        {
+            0%
+            {
+                transform: rotate(0);
+            }
+
+            1%
+            {
+                transform: rotate(30deg);
+            }
+
+            3%
+            {
+                transform: rotate(-28deg);
+            }
+
+            5%
+            {
+                transform: rotate(34deg);
+            }
+
+            7%
+            {
+                transform: rotate(-32deg);
+            }
+
+            9%
+            {
+                transform: rotate(30deg);
+            }
+
+            11%
+            {
+                transform: rotate(-28deg);
+            }
+
+            13%
+            {
+                transform: rotate(26deg);
+            }
+
+            15%
+            {
+                transform: rotate(-24deg);
+            }
+
+            17%
+            {
+                transform: rotate(22deg);
+            }
+
+            19%
+            {
+                transform: rotate(-20deg);
+            }
+
+            21%
+            {
+                transform: rotate(18deg);
+            }
+
+            23%
+            {
+                transform: rotate(-16deg);
+            }
+
+            25%
+            {
+                transform: rotate(14deg);
+            }
+
+            27%
+            {
+                transform: rotate(-12deg);
+            }
+
+            29%
+            {
+                transform: rotate(10deg);
+            }
+
+            31%
+            {
+                transform: rotate(-8deg);
+            }
+
+            33%
+            {
+                transform: rotate(6deg);
+            }
+
+            35%
+            {
+                transform: rotate(-4deg);
+            }
+
+            37%
+            {
+                transform: rotate(2deg);
+            }
+
+            39%
+            {
+                transform: rotate(-1deg);
+            }
+
+            41%
+            {
+                transform: rotate(1deg);
+            }
+
+            43%
+            {
+                transform: rotate(0);
+            }
+
+            100%
+            {
+                transform: rotate(0);
+            }
+        }
+
+        .round
+        {
+            width: 20px;
+            height: 20px;
+            background: #790106;
+            margin-left: 25px;
+            color: White;
+            margin-bottom: -18px;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        .blank
+        {
+        }
+    </style>
+
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  
+    <link href="HomeCss/css/master.css" rel="stylesheet" type="text/css" />
+
+    <link href="HomeCss/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="HomeCss/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="HomeCss/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="HomeCss/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="HomeCss/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+           <script src="jquery-ui.min.js" ></script> 
+<script type="text/javascript">
+
+    function PasswordAvailability() { //This function call on text change.
+
+        $.ajax({
+            type: "POST",
+            url: "Home.aspx/checkPassword", // this for calling the web method function in cs code.  
+            data: '{userpassword: "' + $("#<%=txtOldPwd.ClientID%>")[0].value + '" }', // user name or email value  
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: OnSuccess,
+            failure: function (response) {
+                alert(response);
+            }
+        });
+    }
+
+    // function OnSuccess  
+    function OnSuccess(response) {
+        var msg = $("#<%=lblid.ClientID%>")[0];
+        switch (response.d) {
+            case "true":
+
+                document.getElementById("<%=btnSubmit.ClientID %>").disabled = false;
+                msg.innerHTML = "";
+                break;
+            case "false":
+                msg.style.display = "block";
+                msg.style.color = "red";
+                msg.innerHTML = "Old Password Mis-Match.";
+                document.getElementById("<%=txtOldPwd.ClientID %>").focus();
+                document.getElementById("<%=btnSubmit.ClientID %>").disabled = true;
+
+                //                msg.style.display = "block";
+                //                msg.style.color = "green";
+                //                msg.innerHTML = "Email Available";
+
+
+                break;
+        }
+    }
+
+    </script>
+    <script src="jquery-ui.min.js" ></script> 
+     <%--<script type="text/javascript">
+         $(document).ready(
+       function () {
+           $("#btnSubmit").click(function () {
+               $.ajax({
+                   type: "POST",
+                   url: "Home.aspx/changePassword", // this for calling the web method function in cs code.  
+                   data: '{password: "' + $("#<%=txtnewPwd.ClientID%>")[0].value + '" }', // user name or email value  
+                   contentType: "application/json; charset=utf-8",
+                   dataType: "json",
+                   success: OnSuccess,
+                   failure: function (response) {
+                       alert(response);
+                   }
+               });
+
+
+
+               // function OnSuccess  
+               function OnSuccess(response) {
+                   var msg = $("#<%=lblid.ClientID%>")[0];
+                   switch (response.d) {
+                       case "true":
+
+
+                           msg.innerHTML = "done ";
+                           break;
+                       case "false":
+
+                           //                msg.style.display = "block";
+                           //                msg.style.color = "green";
+                           //                msg.innerHTML = "Email Available";
+
+
+                           break;
+                   }
+               }
+           });
+
+       });
+    </script>--%>
+      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+        });
+
+        function callAjax() {
+           
+            if ($('#txtOldPwd').val().trim() == "") {
+                $('#lblid').show();
+
+                $('#lblid').text("Please Enter Old Password");
+                $('#lblid').fadeToggle(3500);
+
+                return false;
+
+            }
+            if ($('#txtnewPwd').val().trim() == "") {
+                $('#lblid').show();
+
+                $('#lblid').text("Please Enter New Password");
+                $('#lblid').fadeToggle(3500);
+
+                return false;
+
+            }
+            else if ($('#txtConfirmPwd').val().trim() == "") {
+                $('#lblid').show();
+                $('#lblid').text("Please Enter Confirm Password");
+                $('#lblid').fadeToggle(3500);
+
+                return false;
+
+            }
+            else if ($('#txtnewPwd').val().trim() != '') {
+
+
+
+                $.ajax({
+                    type: "POST",
+                    url: "Home.aspx/changePassword", // this for calling the web method function in cs code.  
+                    data: '{password: "' + $("#<%=txtnewPwd.ClientID%>")[0].value + '" }', // user name or email value  
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: OnSuccess,
+                    failure: function (response) {
+                        alert(response);
+                    }
+                });
+
+
+
+                // function OnSuccess  
+                function OnSuccess(response) {
+                    $('#lblid').show();
+                    var msg = $("#<%=lblid.ClientID%>")[0];
+                    switch (response.d) {
+                        case "true":
+
+
+                            msg.innerHTML = "Password Changed Successfully. ";
+                            $('#Div1').fadeToggle(3500);
+                            // $('.reminderCont').fadeToggle(3600);
+
+                            //$('.reminderCont').toggleClass("show-daily-notification-active");
+
+
+
+
+                            break;
+                        case "false":
+
+                            //                msg.style.display = "block";
+                            //                msg.style.color = "green";
+                            //                msg.innerHTML = "Email Available";
+
+
+                            break;
+                    }
+                }
+            }
+    return false;
+}
+
+    </script>
+    
+    <script type="text/javascript">
+        function clrtext() {
+
+            $('#txtOldPwd').val("");
+            $('#txtnewPwd').val("");
+            $('#txtConfirmPwd').val("");
+            $('#lblid').val("");
+
+            $('.reminderCont').toggleClass("show-daily-notification-active");
+            return false;
+
+        }
+
+    </script>
+      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+
+        function onchge() {
+
+            if ($('#txtConfirmPwd').val().trim() != "" && $('#txtnewPwd').val().trim() != "") {
+                if ($('#txtConfirmPwd').val().trim() != $('#txtnewPwd').val().trim()) {
+                    $('#lblid').show();
+                    $('#lblid').text("Password and Confirmed Password Mis-Match.");
+                    $('#txtConfirmPwd').val('');
+                    $('#txtConfirmPwd').focus();
+                    document.getElementById("<%=btnSubmit.ClientID %>").disabled = true;
+
+                }
+                if ($('#txtConfirmPwd').val().trim() == $('#txtnewPwd').val().trim()) {
+                    document.getElementById("<%=btnSubmit.ClientID %>").disabled = false;
+                    $('#lblid').hide();
+                }
+
+            }
+        }
+
+    </script>
+
+    <script language="javascript" type="text/javascript" >
+
+
+        $(document).ready(function () {
+
+            $('.show-daily-notification').click(function () {
+                $('.reminderCont').toggleClass("show-daily-notification-active");
+                $('#Div1').hide();
+                $('#lblid').val("");
+                $('#lblid').text("");
+            });
+            $('.show-daily-notificationPwd').click(function () {
+                $('.reminderCont').toggleClass("show-daily-notification-active");
+                $('#txtOldPwd').val("");
+                $('#txtnewPwd').val("");
+                $('#txtConfirmPwd').val("");
+                $('#lblid').val("");
+                $('#lblid').text("");
+                $('#Div1').show();
+
+            });
+
+        });
+
+
+    </script>
+        <div id="header-home">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-sm-3">
+                            <div id="header-home-right">
+                                <ul>
+                                    <li><a href="#" style="font-size: 14px;">E-Booking</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-3" style="padding: 0px;">
+                            <div id="header-home-right-main">
+
+                                <div style="margin-right: 30px; z-index: 9999 !important;">
+                                    <ul>
+                                        <li><a href="#">Welcome Admin</a></li>
+                                        <li><a href="Home.aspx">
+                                            <img src="images/home.png" width="14" height="15" title="Home"></a></li>
+
+                                        <li><a href="javascript:void(0);" class="show-daily-notificationPwd">
+                                            <img src="images/PixelKit_location_icon.png" width="14" height="15" title="Change Password"></a></li>
+                                        <li>
+
+
+
+                                            <!--<a href="#" ID="idalert" runat="server" onClick="callmeHello();" >-->
+
+                                            <a href="javascript:void(0);" class="show-daily-notification">
+                                                <span id="divbell" runat="server"></span>
+                                                <asp:Image ToolTip="Tasks due in next 4 days" runat="server" CssClass="bell" ID="imgbell"
+                                                    Height="18px" Width="18px" ImageUrl="~/img/bell2.png" />
+                                            </a>
+                                            </a>
+
+						<div class="reminderCont">
+                                                                       
+                            <div class="dcWrapper">
+                                  <asp:Label ID="lblid" runat="server"  ForeColor="Red" Text="" ></asp:Label>
+                                <div id="share_links_reminder">
+
+                                    <%--<a herf="#" style="cursor:pointer;">Share link</a>
+								
+							</p>
+							<p>
+							<a herf="#" style="cursor:pointer;">Share link</a>
+								
+							</p>
+							<p>
+							<a herf="#" style="cursor:pointer;">Share link</a>--%>
+
+                                    <p>
+
+
+                                        <asp:Repeater runat="server" ID="rptnoti">
+                                            <ItemTemplate>
+                                                <a style="cursor: pointer;" href="details.aspx?id=<%# Eval("id") %>">
+                                                    <%# Eval("Etitle") %></a>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </p>
+
+
+                                </div>
+                               
+                                <div id="Div1" style="display: none; margin-top:-10px;">
+                                    
+                                    <table>
+                                         <p style="border-bottom:1px #e5e5e5 solid; line-height:22px; padding-bottom:5px;">Change password</p>
+                                      <tr style="background:none;">
+                                          
+                                            <td style=" width:90px; float:left; background:none;">
+                                               <p> Old Pwd</p>
+                                            </td>
+                                            <td style="background:none;">
+                                                <asp:TextBox ID="txtOldPwd" runat="server" ClientIDMode="Static" onchange="PasswordAvailability();" TextMode="Password" autocomplete="off" AutoCompleteType="None" style="border:1px #666 solid; width:80px; float:left; border-radius:5px;"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                       <tr style="background:none;">
+                                           
+                                                <td style=" width:90px; float:left; background:none;">
+                                               <p> New Pwd</p>
+                                            </td>
+                                        <td style="background:none;">
+                                                <asp:TextBox ID="txtnewPwd" runat="server" onchange="onchge();" ClientIDMode="Static" TextMode="Password" autocomplete="off" AutoCompleteType="None" style="border:1px #666 solid; width:80px; float:left; border-radius:5px;"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                         <tr style="background:none;">
+                                            
+                                                 <td style=" width:90px; float:left; background:none;">
+                                                <p>Confirm Pwd</p>
+                                            </td>
+                                           <td style="background:none;">
+                                                <asp:TextBox ID="txtConfirmPwd" runat="server" onchange="onchge();" ClientIDMode="Static" TextMode="Password" autocomplete="off" style="border:1px #666 solid; width:80px; float:left; border-radius:5px;" ></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                         <tr>
+                                            
+                                            <td dir="ltr" style="background:none;">
+                                                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClientClick="return callAjax();" ClientIDMode="Static" style="color:#fff; font-size:12px; text-align:center; background:#272f45; line-height:17px; border:1px #900 solid; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; padding:2px 10px; margin-top:10px;"    />
+                                            </td>
+                                            <td dir="ltr" style="background:none;">
+                                               <asp:Button ID="BtnCancel" runat="server" Text="Cancel"  ClientIDMode="Static" OnClientClick="return clrtext();" style="color:#fff; font-size:12px; text-align:center; background:#272f45; line-height:17px; border:1px #900 solid; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; padding:2px 10px; margin-top:10px;"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                                        </li>
+                                        <li><a href="#">
+                                            <%--   <img src="images/logout.png" width="14" height="15">--%>
+
+                                            <asp:ImageButton ID="LinkButton2" ImageUrl="images/logout.png" Width="14" Height="15" runat="server" OnClick="LinkButton2_Click" Style="margin-top: 4px;" ToolTip="LogOut" />
+                                        </a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-sm-1">
+
+
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <img src="images/logo.png" width="90" height="27">
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="collapse navbar-collapse" id="navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right navbar-user">
+
+                                <li><a href="Home.aspx">Home</a></li>
+                                <%-- <li ><a href="AddEvent.aspx"  >Event</a></li>--%>
+
+                                <%--   <li ><a href="AddEvent1.aspx"  >Event</a></li>--%>
+                                <li class="dropdown">
+                                    <a href="AddEvent.aspx" id="AddEvent" runat="server" class="thickbox">Add Booking</a>
+
+
+                                </li>
+
+
+                                <!--<li ><a href="#" class="thickbox" >Manage</a></li>-->
+                                <li class="dropdown">
+                                    <a href="#" class="thickbox drop" id="manageid" runat="server">Manage</a>
+                                    <a class="drop1 dropdown-toggle" href="#" data-toggle="dropdown" data-target="#" aria-expanded="false"><b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu">
+                                         <li><a href="Report.aspx" id="report" runat="server">Bookings</a></li>
+                                        <li><a href="client.aspx" id="Promoters" runat="server" class="active">Client</a></li>
+
+                                        <li><a href="Inventory.aspx" id="Inventory" runat="server">Inventory</a></li>
+                                        <li><a href="Invoice.aspx" id="Invoices" runat="server">Invoices</a></li>
+                                       
+                                        <li><a href="Assets.aspx" id="Add_location" runat="server">Venues/Assets</a></li>
+
+                                    </ul>
+
+                                </li>
+
+                                <!--<li ><a href="#" class="thickbox thickbox" >Admin</a></li>-->
+                                <li class="dropdown" id="reminder1" runat="server">
+                                    <a href="#" id="lnkAdmin" runat="server" class="thickbox drop">Admin</a>
+                                    <a class="drop1 dropdown-toggle" href="#" data-toggle="dropdown" data-target="#" aria-expanded="false"><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+
+
+                                        <li><a href="Reminder.aspx" id="Reminder" runat="server" class="active">Reminder</a></li>
+                                        <li><a href="Admin.aspx" id="Admin" runat="server">Users</a></li>
+                                        <li><a href="Roles.aspx" id="AccessInfo" runat="server">Roles</a></li>
+
+
+                                    </ul>
+
+                                </li>
+
+
+
+
+                            </ul>
+                            <!-- /right-nav -->
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+
+                <div class="clear"></div>
+
+
+            </div>
+        </div>
+
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+        <script>
+            $(function () {
+                bannerslider()
+                portfolioSlider()
+                testimonialSlider()
+
+            });
+        </script>
+
+
+
+
+        <div class="clear"></div>
+
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="clear"></div>
+        <div id="full-width"></div>
+        <div class="footer-col">
+            <p>© All rights reserved by Deaninfotech Pvt Ltd.</p>
+        </div>
+
+    </form>
+</body>
+</html>

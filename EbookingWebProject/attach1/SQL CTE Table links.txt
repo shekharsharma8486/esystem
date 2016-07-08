@@ -1,0 +1,15 @@
+http://www.dotnet-tricks.com/Tutorial/sqlserver/X517150913-Difference-between-CTE-and-Temp-Table-and-Table-Variable.htmls
+
+http://www.c-sharpcorner.com/uploadfile/e7ad16/reference-type-and-value-type-in-C-Sharp/
+
+http://www.c-sharpcorner.com/uploadfile/3d39b4/an-example-of-generics-using-c-sharp-in-asp-net/
+
+http://www.c-sharpcorner.com/uploadfile/3d39b4/an-example-of-generics-using-c-sharp-in-asp-net/
+
+
+http://www.dotnetfunda.com/forums/show/8738/what-is-serialization-in-csharp
+
+http://www.c-sharpcorner.com/interviews/answer/499/
+
+
+09992841718

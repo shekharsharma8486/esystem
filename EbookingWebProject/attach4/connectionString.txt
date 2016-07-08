@@ -1,0 +1,2 @@
+ <add name="con" connectionString="server=SHEKHAR\SQLEXPRESS;database=CRMDb;INTEGRATED Security=true;Pooling=False;" />
+    <add name="CRMDbCon" connectionString="Data Source=SHEKHAR\SQLEXPRESS;Initial Catalog=CRMDb;Integrated Security=True" providerName="System.Data.SqlClient" />

@@ -1,0 +1,17 @@
+select E_startdate,E_enddate,E_grounds from events where E_grounds like '%2%' and E_startdate between '2014-11-23' and '2014-11-25' or E_enddate between '2014-11-23' and '2014-11-25'
+
+
+
+Dean E-Booking System
+
+A Powerful Event Tracker to effectively manage your bookings
+
+User-friendly, inexpensive, secure with easy third party integration.
+
+
+ebooking
+deanpassword
+
+
+
+style="width:40%;float:right;margin-top: 15px;margin-bottom: 10px;"

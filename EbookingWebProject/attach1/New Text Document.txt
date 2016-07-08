@@ -1,0 +1,46 @@
+01161606161 hdfc customer care
+
+
+
+
+http://www.dailymotion.com/video/x23pp8b_mahabharat-full-episode-13th-august-2014-episode-264-star-plus_shortfilms
+
+drop table HtmlInsert
+create table HtmlInsert(id int identity (1,1),Userid varchar(20), username varchar(100),[address] varchar(100), cdate datetime)
+
+insert into HtmlInsert values('S001','Shekhar','Sector49',getdate())
+
+select * from HtmlInsert
+
+alter proc sp_GetHtmlBindData
+
+as
+begin
+
+select *,DATENAME(mm, cdate)as MyMonth, year(cdate) as Myyear, datediff(dd,dateadd(dd, 1-day(cdate),cdate), dateadd(m,1,dateadd(dd, 1-day(cdate),cdate))) as NumberofDays from HtmlInsert
+end
+
+exec sp_GetHtmlBindData
+
+
+ StringBuilder sbLetter = new StringBuilder();
+        sbLetter.Append("<html><body><div style='font-size: 13px; color: #666666; font-family: Arial, Verdana'>");
+        sbLetter.Append(" <br />Dear ");
+        sbLetter.Append("<strong>");
+        sbLetter.Append(UserName);
+        sbLetter.Append("</strong>");
+        sbLetter.Append(",<br /><br />Please find below your <strong><i>Prakash Offset CRM</i></strong> Account details:");
+        //sbLetter.Append("<br /><br />Your account membership information is: ");
+        sbLetter.Append("<br /><br /> LoginId : <strong>");
+        sbLetter.Append(EMailID);
+        sbLetter.Append("</strong><br />");
+        sbLetter.Append(" Password : <strong>");
+        sbLetter.Append(Pwd);
+        sbLetter.Append("</strong><br /><br />Your account is ready to use and you can login by using the following link: <strong>");
+        sbLetter.Append("<a href='");
+        sbLetter.Append(WebUrl);
+        sbLetter.Append(ValidationKey);
+        sbLetter.Append("'>  click here");
+        sbLetter.Append("</a></strong><br /> <br />");
+        sbLetter.Append("<br /> <br /><strong>Regards,<br /><br />CRM Team @Prakashoffset.com</strong></div></body></html>");
+        return sbLetter.ToString();
